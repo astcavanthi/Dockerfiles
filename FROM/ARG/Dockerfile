@@ -1,4 +1,5 @@
 ARG VERSION
 FROM almalinux:${VERSION:-8}
 ARG GREETING
-RUN echo "duration is: ${GREETING}"
+ENV GREET=${GREETING}
+RUN echo "${GREETING}"
